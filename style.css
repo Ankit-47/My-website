@@ -114,7 +114,7 @@ span{
 .home-content h1{
     font-size: 8rem;
     font-weight: 700;
-    line-height: 1.3rem;
+    line-height: 1.3;
 }
 .home-img{
     border-radius: 50%;
@@ -151,4 +151,100 @@ span{
     transform: scale(1.3) translateY(-5px);
     background-color: var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+    transition: 0.3 ease;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    border: 2px solid transparent;
+}
+.btn:hover{
+    box-shadow: 0 0 25px var(--main-color);
+    transform: scale(1.05);
+}
+
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.text-animation span{
+    position: relative;
+}
+
+.text-animation span::before{
+    content: 'Student';
+    color: var(--main-color);
+    animation: word 20s infinite;
+}
+.text-animation span::after{
+    content: '';
+    color: var(--main-color);
+    animation: word 20s infinite;
+    position: absolute;
+    background-color: var(--bg-color);
+    width: calc(100% +8px);
+    height: 100%;
+    border-left: 2px solid#333;
+    right: -8px;
+    animation:cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left:2px solid var(--main-color)
+    }
+}
+@keyframes words {
+    0%,
+    20%{
+        content: 'Student';
+    }
+    21%,
+    40%{
+        content: 'Learner';
+    }
+    41%,60%{
+        content:'Gamer' ;
+    }
+    61%,80%{
+        content: 'Web Developer';
+    }
+    81%,100%{
+        content: 'Web Designer';
+    }
+}
+
+
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% +8px);
+    }
 }
