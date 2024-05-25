@@ -1,33 +1,34 @@
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:  border-box;
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins",sans-serif;
     text-decoration: none;
 }
 
-:root {
+:root{
     --bg-color: #141414;
-    --second-bf-color: #e76262;
-    --text-color: white;
-    --main-color: #51cf94;
+    --second-bf-color:#e76262;
+    --text-color:white;
+    --main-color:#51cf94;
 }
 
-html {
+html{
     font-size: 63.5%;
     overflow: hidden;
 }
 
-body {
+body
+{
     background-color: var(--bg-color);
     color: var(--text-color);
 
 }
 
-.header {
+.header{
     position: fixed;
     padding: 3rem 9%;
     width: 100%;
@@ -38,109 +39,105 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background: rgba(0, 0, 0, 0, 0.8);
+    background: rgba(0, 0,0,0,0.8);
     backdrop-filter: blur(10px);
-
+    
 
 }
-
-.logo {
+.logo{
     font-size: 3rem;
-    color: var(--text-color);
+    color:var(--text-color);
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.logo:hover {
+.logo:hover{
     transform: scale(1.1);
 }
 
-.navbar a {
+.navbar a{
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
     font-weight: 400;
     transition: 0.3 ease;
     border-bottom: 3px solid transparent;
-
+   
 }
 
 .navbar a:hover,
-.navbar a.active {
+.navbar a.active{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
-    text-shadow: 0 0 25px var(--main-color),
-        0 0 50px var(--main-color);
+    text-shadow: 0  0  25px var(--main-color),
+                 0  0  50px var(--main-color);                
 }
 
-#menu-icon {
+#menu-icon{
     font-size: 36px;
     color: var(--main-color);
     display: none;
 }
 
-section {
+section{
     min-height: 100vh;
     padding: 10rem 9% 10rem;
 }
 
 
-.home {
+.home{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8rem;
 }
 
-.home-content h3 {
+.home-content h3{
     font-size: 3.2rem;
     font-weight: 700;
 }
 
-span {
+span{
     color: var(--main-color);
 }
-
-.logo span {
-    text-shadow: 0 0 25px var(--main-color),
-        0 0 100px var(--main-color);
+.logo span{
+    text-shadow:  0 0 25px var(--main-color),
+                  0 0 100px var(--main-color);
 }
 
-.home-content h3:nth-of-type(2) {
+.home-content h3:nth-of-type(2){
     margin-bottom: 2rem;
     font-size: 5rem;
 }
 
-.home-content h1 {
+.home-content h1{
     font-size: 8rem;
     font-weight: 700;
     line-height: 1.3;
 }
-
-.home-img {
+.home-img{
     border-radius: 50%;
 }
 
-.home-img img {
+.home-img img{
     position: relative;
     width: 32vw;
     border-radius: 50%;
     cursor: pointer;
 }
-
-.home-content p {
+.home-content p{
     font-size: 1.8rem;
     font-weight: 500;
 }
 
-.social-icons a {
+.social-icons a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 4rem;
     height: 4rem;
-    background: transparent;
+    background:transparent;
     border: 0.2rem solid var(--main-color);
     font-size: 2rem;
     border-radius: 50%;
@@ -149,14 +146,14 @@ span {
     transition: 0.3 ease;
 }
 
-.social-icons a:hover {
+.social-icons a:hover{
     color: white;
     transform: scale(1.3) translateY(-5px);
     background-color: var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
 }
 
-.btn {
+.btn{
     display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--main-color);
@@ -169,98 +166,37 @@ span {
     letter-spacing: 0.1rem;
     border: 2px solid transparent;
 }
-
-.btn:hover {
+.btn:hover{
     box-shadow: 0 0 25px var(--main-color);
     transform: scale(1.05);
 }
 
-.text-animation {
+.ok {
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
-}
-
-.text-animation span {
     position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 1em; /* Adjust based on your font-size */
 }
 
-.text-animation span::before {
-    content: 'Student';
-    color: var(--main-color);
-    animation: words 20s infinite;
-}
-
-.text-animation span::after {
-    content: '';
-    background-color: var(--bg-color);
+.ok .word {
     position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 2px solid var(--main-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    animation: word 20s infinite;
 }
 
-@keyframes cursor {
-    to {
-        border-left: 2px solid var(--main-color);
-    }
-}
+.ok .word:nth-of-type(1) { animation-delay: 0s; }
+.ok .word:nth-of-type(2) { animation-delay: 4s; }
+.ok .word:nth-of-type(3) { animation-delay: 8s; }
+.ok .word:nth-of-type(4) { animation-delay: 12s; }
+.ok .word:nth-of-type(5) { animation-delay: 16s; }
 
-@keyframes words {
-
-    0%,
-    20% {
-        content: 'Student';
-    }
-
-    21%,
-    40% {
-        content: 'Learner';
-    }
-
-    41%,
-    60% {
-        content: 'Gamer';
-    }
-
-    61%,
-    80% {
-        content: 'Web Developer';
-    }
-
-    81%,
-    100% {
-        content: 'Web Designer';
-    }
-}
-
-
-@keyframes typing {
-
-    10%,
-    15%,
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    90%,
-    95% {
-        width: 100;
-    }
-
-    5%,
-    20%,
-    20%,
-    25%,
-    40%,
-    45%,
-    60%,
-    65%,
-    80%,
-    85% {
-        width: 0;
-    }
+@keyframes word {
+    0%, 20%, 100% { opacity: 0; }
+    5%, 15% { opacity: 1; }
 }
