@@ -248,4 +248,30 @@ span {
     line-height: 1.5;
     font-size: 6rem;
     font-weight: 800;
+    
+}
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    border: 2px solid transparent;
+}
+
+.button:hover {
+    box-shadow: 0 0 25px var(--main-color);
+    transform: scale(1.05);
+}
+
+.about-content p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 15px;
 }
