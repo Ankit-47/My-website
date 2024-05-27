@@ -275,73 +275,89 @@ span {
     font-weight: 500;
     margin-top: 15px;
 }
-
-.projects{
+.projects {
     background-color: var(--second-bf-color);
+    padding: 50px;
 }
-.projects h2{
-margin-bottom: 5rem;
+
+.projects h2 {
+    margin-bottom: 5rem;
+    text-align: center;
 }
-.projects-container{
+
+.projects-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
 
-.projects-container .projects-box{
+.projects-container .projects-box {
     position: relative;
     border-radius: 2rem;
-    box-shadow:  0 0 1rem var(--bg-color);
+    box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+    flex-direction: column;
 }
 
-.projects-box img{
+.projects-box img {
     width: 100%;
-    transform: 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
-.projects-box:hover img{
+.projects-box:hover img {
     transform: scale(1.1);
 }
-.projects-box.projects-info{
-    position:absolute;
+
+.projects-box .projects-info {
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-   text-align: center;
+    text-align: center;
     padding: 0 4rem;
     cursor: pointer;
-    transition: 0.5s ease;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: background 0.5s ease, transform 0.5s ease;
+    opacity: 0;
 }
-.projects-box.projects-info:hover{
-    background: radial-gradient(rgba(0,0,0,0.5),
-    var(--main-color));
-    transform: scale(1.1);
+
+.projects-box:hover .projects-info {
+    opacity: 1;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), var(--main-color));
 }
-.projects-info p{
+
+.projects-info h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.projects-info p {
     font-size: 1.6rem;
     margin: 0.3rem 0 1rem;
     font-weight: 600;
 }
-.projects-info a{
+
+.projects-info a {
     color: white;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 5rem;
-    height:5rem ;
+    height: 5rem;
     background: var(--main-color);
     border-radius: 50%;
-
+    margin-top: 1rem;
 }
-.projects-box  a i{
+
+.projects-info a i {
     font-size: 3rem;
-    color: var(--main-color);
-    
+    color: white;
 }
