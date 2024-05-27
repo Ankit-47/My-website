@@ -275,3 +275,73 @@ span {
     font-weight: 500;
     margin-top: 15px;
 }
+
+.projects{
+    background-color: var(--second-bf-color);
+}
+.projects h2{
+margin-bottom: 5rem;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.projects-container .projects-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow:  0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.projects-box img{
+    width: 100%;
+    transform: 0.5s ease;
+}
+
+.projects-box:hover img{
+    transform: scale(1.1);
+}
+.projects-box.projects-info{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   text-align: center;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.projects-box.projects-info:hover{
+    background: radial-gradient(rgba(0,0,0,0.5),
+    var(--main-color));
+    transform: scale(1.1);
+}
+.projects-info p{
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+    font-weight: 600;
+}
+.projects-info a{
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height:5rem ;
+    background: var(--main-color);
+    border-radius: 50%;
+
+}
+.projects-box  a i{
+    font-size: 3rem;
+    color: var(--main-color);
+    
+}
