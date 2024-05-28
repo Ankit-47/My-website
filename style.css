@@ -10,7 +10,7 @@
 }
 
 :root {
-    --bg-color: #141414;
+    --bg-color:  #315663;
     --second-bf-color: #141414;
     --text-color: white;
     --main-color: #3ec2a1;
@@ -400,4 +400,11 @@ span {
     background: white;
     position: relative;
     border-radius: 10px;
+}
+.bar .progress-line span{
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: #0077ff;
+    cursor: pointer;
 }
