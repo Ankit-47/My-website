@@ -18,7 +18,7 @@
 
 html {
     font-size: 63.5%;
-    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -567,4 +567,97 @@ span {
     color: white;
     border-bottom: 3px solid transparent;
     transition: 0.3 ease;
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid white;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+footer .copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width:991px) {
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .projects{
+        padding-bottom: 7rem;
+    }
+    .footer{
+       padding: 2rem 3%; 
+    }
+}
+@media (max-width:895px) {
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background-color: var(--second-bf-color);
+        border-top: 0.1rem solid rgba(0, 0,0, 0.105);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width:70vw ;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-content{
+        margin: 1rem 4rem;
+    }
+    .about img{
+        width: 70vw;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .projects h2{
+        margin-bottom: 3rem;
+    }
+    .projects-container{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
