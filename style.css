@@ -10,7 +10,7 @@
 }
 
 :root {
-    --bg-color:  #315663;
+    --bg-color:  #141414;
     --second-bf-color: #141414;
     --text-color: white;
     --main-color: #3ec2a1;
@@ -61,7 +61,11 @@ body {
     border-bottom: 3px solid transparent;
 }
 
-.navbar a:hover,
+.navbar a:hover{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    text-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+}
 .navbar a.active {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
@@ -361,16 +365,15 @@ span {
     font-size: 3rem;
     color: white;
 }
-
-.skills h2{
+.skills h2 {
     margin-bottom: 2rem;
-
 }
 
-.skills{
-    margin:  0 auto;
+.skills {
+    margin: 0 auto;
 }
-.skill-bar{
+
+.skill-bar {
     padding: 25px 30px;
     background: var(--second-bf-color);
     border-radius: 10px;
@@ -378,33 +381,93 @@ span {
     flex-direction: column;
     gap: 3rem;
 }
-.skill-bar .bar{
+
+.skill-bar .bar {
     margin: 20px 0;
 }
-.skill-bar .bar:first-child{
+
+.skill-bar .bar:first-child {
     margin-top: 0px;
 }
 
-.skill-bar .bar .info{
+.skill-bar .bar .info {
     margin-bottom: 5px;
 }
 
-.skill-bar .bar .info span{
+.skill-bar .bar .info span {
     color: white;
-    font-size: 500;
-    font-weight: 17px;
+    font-size: 17px; 
+    font-weight: 500; 
 }
-.skill-bar .bar .progress-line{
+
+.skill-bar .bar .progress-line {
     height: 10px;
     width: 100%;
     background: white;
     position: relative;
     border-radius: 10px;
 }
-.bar .progress-line span{
+
+.skill-bar .bar .progress-line span { 
     height: 100%;
     position: absolute;
     border-radius: 10px;
     background: #0077ff;
     cursor: pointer;
 }
+
+.bar .progress-line.javascript span{
+    width: 100%;
+    background-color: gold;
+    box-shadow: 0 0 25px gold;
+    transition: 0.5s ease;
+}
+.bar .progress-line.javascript span:hover{
+box-shadow: 0 0 25px gold,
+            0 0 50pz gold;
+}
+
+.bar .progress-line.react span{
+    width: 100%;
+    background-color: rgb(65, 149, 227);
+    box-shadow:0 0 25px rgb(65, 149, 227) ;
+    transition: 0.5s ease;
+}
+.bar .progress-line.react span:hover{
+    box-shadow: 0 0 25px  rgb(65, 149, 227),
+                0 0 50pz  rgb(65, 149, 227);
+    }
+
+    .bar .progress-line.mysql span{
+        width: 100%;
+        background-color: rgb(0, 117, 143);
+        box-shadow:0 0 25px rgb( 0, 117, 143) ;
+        transition: 0.5s ease;
+    }
+    .bar .progress-line.mysql span:hover{
+        box-shadow: 0 0 25px  rgb(0, 117, 143),
+                    0 0 50pz  rgb(0, 117, 143);
+        }
+
+        
+    .bar .progress-line.html span{
+        width: 100%;
+        background-color:rgb(255, 68, 0);
+        box-shadow:0 0 25px rgb(255, 68, 0) ;
+        transition: 0.5s ease;
+    }
+    .bar .progress-line.html span:hover{
+        box-shadow: 0 0 25px  rgb(255, 68, 0),
+                    0 0 50pz rgb(255, 68, 0);
+        }
+
+        .bar .progress-line.css span{
+            width: 100%;
+            background-color:rgb(173, 26, 173);
+            box-shadow:0 0 25px rgb(173, 26, 173) ;
+            transition: 0.5s ease;
+        }
+        .bar .progress-line.css span:hover{
+            box-shadow: 0 0 25px rgb(173, 26, 173),
+                        0 0 50   rgb(173, 26, 173);
+            }
