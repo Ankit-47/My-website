@@ -10,7 +10,7 @@
 }
 
 :root {
-    --bg-color: #141414;
+    --bg-color: #000000;
     --second-bf-color: #141414;
     --text-color: white;
     --main-color: #3ec2a1;
@@ -483,9 +483,7 @@ span {
         0 0 50 rgb(173, 26, 173);
 }
 
-.contact{
-    background-color: var(--second-bf-color);
-}
+
 .contact h2{
     margin-bottom: 3rem;
 }
@@ -500,12 +498,27 @@ span {
     justify-content: center;
     flex-wrap: wrap;
 }
- .contact form .input-box input,
+ .contact form .input-box input
+ {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--second-bf-color);
+    border-radius: 0.8rem;
+    margin: 1rem 0;
+    resize: none;
+ }
  .contact form textarea{
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background-color: var(--bg-color);
-    
+    background-color: var(--second-bf-color);
+    border-radius: 0.8rem;
+    margin: 1rem 0;
+    resize: none; 
+ }
+ .contact form .btn{
+    margin-top: 2rem;
  }
