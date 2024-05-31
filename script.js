@@ -25,10 +25,14 @@ menuIcon.onclick = () => {
 };
 const scriptURL = 'https://script.google.com/macros/s/AKfycby0b4tYUi0FdnA2_Z1pJ-V8Dwe5wLNa0J52bDm3wHPlAlhOFot1bdOxa_EfmcZBF0xf/exec'
 const form = document.forms['submit-to-google-sheet']
-
+const msg = document.getElementById("msg")
 form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => console.log('Success!', response))
+        .then(response => {msg.innerHTML="The Message has been sent.."})
+        setTimeout(function(){
+            msg.innerHTML= ""
+        },500)
+        form.reset()
         .catch(error => console.error('Error!', error.message))
 })

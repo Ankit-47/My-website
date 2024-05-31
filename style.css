@@ -582,6 +582,13 @@ footer .copyright{
     color: white;
 }
 
+#msg{
+    color: white;
+    margin-top: -5px;
+    display: block;
+    text-align: center;
+    font-size: medium;
+}
 @media (max-width:1200px){
     html{
         font-size: 55%;
