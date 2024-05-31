@@ -70,7 +70,7 @@
                 </div>
             </h3>
             <p>
-               !! I am Student currently pursuing my carrer in Software Engineering at NCIT.
+                !! I am Student currently pursuing my carrer in Software Engineering at NCIT.
                 Web Development is quite interesting for me.
                 Trying to leaner unknown part to seek my better future.
 
@@ -82,7 +82,7 @@
 
     <section class="projects" id="projects">
         <h2 class="heading">Projects</h2>
-    
+
         <div class="projects-container">
             <div class="projects-box">
                 <img src="assets/ferenc-almasi-eYpcLDXHVb0-unsplash.jpg" alt="Web Design">
@@ -94,7 +94,7 @@
                     <a href="#"><i class="bx bx-link"></i></a>
                 </div>
             </div>
-    
+
             <div class="projects-box">
                 <img src="assets/lee-campbell-DtDlVpy-vvQ-unsplash.jpg" alt="Photography">
                 <div class="projects-info">
@@ -105,7 +105,7 @@
                     <a href="#"><i class='bx bx-link'></i></a>
                 </div>
             </div>
-    
+
             <div class="projects-box">
                 <img src="assets/pexels-czapp-arpad-3647289-17204164.jpg" alt="Graphic Design">
                 <div class="projects-info">
@@ -116,7 +116,7 @@
                     <a href="#"><i class="bx bx-link"></i></a>
                 </div>
             </div>
-    
+
             <div class="projects-box">
                 <img src="assets/roberto-nickson-Gvm2wM3V5PA-unsplash.jpg" alt="Frontend Development">
                 <div class="projects-info">
@@ -149,11 +149,11 @@
             </div>
         </div>
     </section>
-    
+
     <section class="skills" id="skills">
         <h2 class="heading">Skills</h2>
-        <div class="skill-bar"> 
-    
+        <div class="skill-bar">
+
             <div class="bar">
                 <div class="info">
                     <span>HTML</span>
@@ -162,7 +162,7 @@
                     <span></span>
                 </div>
             </div>
-    
+
             <div class="bar">
                 <div class="info">
                     <span>CSS</span>
@@ -171,7 +171,7 @@
                     <span></span>
                 </div>
             </div>
-    
+
             <div class="bar">
                 <div class="info">
                     <span>Javascript</span>
@@ -180,7 +180,7 @@
                     <span></span>
                 </div>
             </div>
-    
+
             <div class="bar">
                 <div class="info">
                     <span>React</span>
@@ -189,7 +189,7 @@
                     <span></span>
                 </div>
             </div>
-    
+
             <div class="bar">
                 <div class="info">
                     <span>MySQL</span>
@@ -198,33 +198,33 @@
                     <span></span>
                 </div>
             </div>
-    
+
         </div>
     </section>
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="#">
+        <form name="submit-to-google-sheet">
             <div class="input-box">
-                <input type="text" name="Name" placeholder="Full Name">
-                <input type="email" email="Email" placeholder="Email">
+                <input type="text" name="Name" placeholder="Full Name" required>
+                <input type="email" name="Email" placeholder="Email" required>
             </div>
             <div class="input-box">
-                <input type="number" name="Number" placeholder="Phone Number">
-                <input type="text" name="about" placeholder="Subject">
+                <input type="number" name="Number" placeholder="Phone Number" required>
+                <input type="text" name="About" placeholder="Subject" required>
             </div>
-
-            <textarea cols="30" rows="10" name="Message" placeholder="Your Message..."></textarea>
-            <input type="button" value="Send Message" class="btn">
+            <textarea cols="30" rows="10" name="Message" placeholder="Your Message..." required></textarea>
+            <input type="submit" value="Send Message" class="btn">
         </form>
+        
     </section>
-    
+
     <footer class="footer">
         <div class="social">
             <a href="https://www.instagram.com/ankiteeeyyy/"><i class='bx bxl-instagram'></i></a>
             <a href="https://www.linkedin.com/in/ankit-katwal-161947264/"><i class='bx bxl-linkedin'></i></a>
             <a href="https://www.linkedin.com/in/ankit-katwal-161947264/"><i class='bx bxl-facebook'></i></a>
-            <a href="https://github.com/Ankit-47"><i class='bx bxl-github'></i></a>    
+            <a href="https://github.com/Ankit-47"><i class='bx bxl-github'></i></a>
         </div>
         <ul class="list">
             <li>
@@ -249,6 +249,17 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby0b4tYUi0FdnA2_Z1pJ-V8Dwe5wLNa0J52bDm3wHPlAlhOFot1bdOxa_EfmcZBF0xf/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script> -->
 </body>
 
 </html>
