@@ -655,8 +655,19 @@ footer .copyright{
         margin-bottom: 3rem;
     }
 
-    .projects h2, .projects h4, .projects p {
-        margin-bottom: 5rem;
+    .projects h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 3rem; /* Reduced margin for better spacing */
+    }
+    
+    .projects h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .projects p {
+        margin-bottom: 1rem;
     }
     
     .projects-container {
@@ -666,7 +677,9 @@ footer .copyright{
     }
     
     .projects-box {
-        height: 270px;
+        height: 300px;
+        overflow: hidden; /* Hide any overflow to ensure clean edges */
+        position: relative;
     }
     
     .projects-box img {
@@ -684,5 +697,20 @@ footer .copyright{
         padding: 1rem;
         box-sizing: border-box;
     }
+    
+    .projects-info h4 {
+        margin: 0;
+    }
+    
+    .projects-info p {
+        margin: 0.5rem 0;
+    }
+    
+    .projects-info a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+    
     
 }
